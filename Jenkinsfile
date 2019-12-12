@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Dev') {
             steps {
-                'docker build'
+                sh "docker build --no-cache"
             }
         }
     }
