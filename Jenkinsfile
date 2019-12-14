@@ -3,9 +3,6 @@ pipeline {
 
     stages {
         stage('Dev') {
-            when {
-              branch 'dev'
-            }
             steps {
                 script {
                     withCredentials([sshUserPrivateKey(credentialsId: 'dev', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
