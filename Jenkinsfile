@@ -2,7 +2,7 @@ pipeline {
    agent any
 
     stages {
-        stage('Dev') {
+        stage('Deploy to Dev') {
             steps {
                 script {
                     withCredentials([sshUserPrivateKey(credentialsId: 'dev', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
