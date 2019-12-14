@@ -6,3 +6,4 @@ EXPOSE 80
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
 
 COPY    index.html /var/www/html/
+COPY    puppy.jpeg /var/www/html/
